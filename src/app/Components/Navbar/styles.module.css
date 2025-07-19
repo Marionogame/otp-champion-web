@@ -1,0 +1,19 @@
+.contMenu {
+  border: 0 !important;
+}
+.contMenu::before {
+  content: none !important;
+}
+
+.constNavbar {
+  height: 55px !important;
+}
+
+.constMenu {
+  background: rgb(33, 45, 52) !important;
+  background: linear-gradient(90deg, rgba(33, 45, 52, 1) 0%, rgba(5, 0, 15, 1) 100%) !important;
+  height: 50px !important;
+  width: 100% !important;
+  z-index: 99 !important;
+  position: fixed !important;
+}

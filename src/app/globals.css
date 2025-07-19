@@ -1,0 +1,53 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+@layer utilities {
+  .bg-gold-gradient {
+    background: rgb(255, 252, 189);
+    background: linear-gradient(
+      346deg,
+      rgba(255, 252, 189, 1) 0%,
+      rgba(251, 226, 129, 1) 7%,
+      rgba(217, 183, 109, 1) 14%,
+      rgba(140, 109, 45, 1) 40%,
+      rgba(244, 214, 97, 1) 75%,
+      rgba(167, 141, 79, 1) 100%
+    );
+  }
+
+  .bg-gold-gradient {
+    text: linear-gradient(
+      346deg,
+      rgba(255, 252, 189, 1) 0%,
+      rgba(251, 226, 129, 1) 7%,
+      rgba(217, 183, 109, 1) 14%,
+      rgba(140, 109, 45, 1) 40%,
+      rgba(244, 214, 97, 1) 75%,
+      rgba(255, 252, 189, 1) 0%
+    );
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
