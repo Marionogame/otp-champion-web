@@ -1,0 +1,40 @@
+.gradientBorder {
+  padding: 2px;
+  border-radius: 12px;
+  border: linear-gradient(
+    346deg,
+    rgba(255, 252, 189, 1) 0%,
+    rgba(251, 226, 129, 1) 7%,
+    rgba(217, 183, 109, 1) 14%,
+    rgba(140, 109, 45, 1) 35%,
+    rgba(244, 214, 97, 1) 40%,
+    rgba(167, 141, 79, 1) 55%,
+    rgba(244, 214, 97, 1) 68%,
+    rgba(140, 109, 45, 1) 70%,
+    rgba(217, 183, 109, 1) 88%,
+    rgba(251, 226, 129, 1) 97%,
+    rgba(255, 252, 189, 1) 100%
+  );
+}
+.borderCut {
+  position: relative;
+  padding: 1rem 2rem;
+  background: white;
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+  z-index: 1;
+}
+
+.borderCut::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #1c252d; /* Color del borde */
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+  z-index: -1;
+  padding: 1px; /* Grosor del borde */
+}
+
+.gradientInner {
+  /* border-radius: 12px; */
+  /* background-color: white; */
+}

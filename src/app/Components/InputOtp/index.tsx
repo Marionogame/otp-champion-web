@@ -112,6 +112,7 @@ const InputOtp: React.FC<InputProps> = ({ big }) => {
               borderBottom: "20px solid transparent",
             }}
           />
+
           <button
             // className={`w-full flex items-center text-white font-bold border-gray-300 px-4 py-2.5 text-base text-left bg-[linear-gradient(346deg,_rgba(255,252,189,1)_0%,_rgba(251,226,129,1)_7%,_rgba(217,183,109,1)_14%,_rgba(140,109,45,1)_40%,_rgba(244,214,97,1)_75%,_rgba(167,141,79,1)_100%)]`}
             className={`w-full flex items-center text-white font-bold border-gray-300 px-4 py-2.5 text-base text-left bg-gold-gradient`}
@@ -151,6 +152,8 @@ const InputOtp: React.FC<InputProps> = ({ big }) => {
           />
         </div>
       </div>
+
+
       {open && (
         <div className="relative mt-1 w-full bg-gold-gradient">
           <ul
