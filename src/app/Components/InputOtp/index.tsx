@@ -14,7 +14,7 @@ import na from "@assets/icons/regions/na.svg";
 import all from "@assets/icons/regions/earth.svg";
 import las from "@assets/icons/regions/las.svg";
 import yorick from "@assets/yorick.jpg";
-import styles from "./styles.module.css";
+import fondoColina from "@assets/fondo8.webp";
 interface InputProps {
   big: boolean;
 }
@@ -144,6 +144,7 @@ const InputOtp: React.FC<InputProps> = ({ big }) => {
               clipPath: "polygon(100% 100%, 0 100%, 100% 0)",
             }}
           />
+
           <input
             type="text"
             className={`w-full border-gray-300 bg-white px-4 py-2.5 text-gray-700 focus:border-blue-500 focus:outline-none`}
@@ -153,11 +154,27 @@ const InputOtp: React.FC<InputProps> = ({ big }) => {
         </div>
       </div>
 
-
       {open && (
-        <div className="relative mt-1 w-full bg-gold-gradient">
+        <div className="relative mt-1 w-full bg-gold-gradient" style={{ height: "24rem" }}>
           <ul
-            className={`flex flex-wrap overflow-y-auto justify-around z-10 h-112  mb-1 mr-1 ml-1 bt-1  border-t-4 border-t-amber-50 bg-[#161F2F] shadow-lg`}>
+            className={`flex flex-wrap overflow-y-auto justify-around z-10 h-112  mb-1 mr-1 ml-1 bt-1  border-t-4 border-t-amber-50 shadow-lg
+  [&::-webkit-scrollbar]:w-2
+  [&::-webkit-scrollbar-track]:bg-gray-100
+  [&::-webkit-scrollbar-thumb]:bg-gray-300
+  dark:[&::-webkit-scrollbar-track]:bg-neutral-700
+  dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500"`}
+            style={{
+              backgroundImage: `url(${fondoColina.src})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              height: "23.8rem",
+              width: "auto",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "#fff",
+            }}>
             {optionChampionRender()}
           </ul>{" "}
         </div>

@@ -45,8 +45,9 @@ const Home = () => {
             quality={100}
           />{" "}
         </div>
+
         <div className={styles.inputContainer}>
-          <div className="w-[23.6rem] bg-amber-800 mt-2 flex items-center justify-center sm:w-[30rem]">
+          <div className="w-[23.6rem] mt-2 flex items-center justify-center sm:w-[30rem]">
             <InputOtp
               big
 

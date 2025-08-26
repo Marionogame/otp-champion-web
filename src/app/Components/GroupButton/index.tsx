@@ -8,15 +8,14 @@ import adc from "@assets/icons/championPosition/Role=ADC2.svg";
 import mid from "@assets/icons/championPosition/Role=Mid2.svg";
 import support from "@assets/icons/championPosition/Role=Support1.svg";
 import top from "@assets/icons/championPosition/Role=Top2.svg";
-
-import styles from "./styles.module.css";
+import all from "@assets/icons/championPosition/all.svg";
 
 const GroupButton: React.FC = () => {
   return (
     <div className="flex ">
       <div className="relative">
         <div
-          className="absolute z-auto bg-[#1C252D] w-14 h-11 right-1 bottom-0"
+          className="absolute z-auto bg-[#1C252D] w-17 h-11 right-1 bottom-0"
           style={{
             clipPath: "polygon(35% 0, 100% 0, 100% 100%, 0 100%)",
             background: "#1C252D",
@@ -31,9 +30,12 @@ const GroupButton: React.FC = () => {
             background: "#fff",
             boxShadow: "0 0 0 5px #1C252D",
           }}>
-          <Image src={top} alt="Top" className="w-6 h-6" />
+          <Image src={all} alt="All" className="w-6 h-6 ml-3" />
         </button>
       </div>
+      <button className="cursor-pointer px-4 py-2 bg-gray-200 text-gray-800 font-semibold border-2 border-[#1C252D] hover:bg-gray-400 transition">
+        <Image src={top} alt="Top" className="w-6 h-6" />
+      </button>
       <button className="cursor-pointer px-4 py-2 bg-gray-200 text-gray-800 font-semibold border-2 border-[#1C252D] hover:bg-gray-400 transition">
         <Image src={jg} alt="Jg" className="w-6 h-6" />
       </button>
@@ -45,7 +47,7 @@ const GroupButton: React.FC = () => {
       </button>
       <div className="relative">
         <div
-          className="absolute bg-red w-14 h-11 left-1 bottom-0"
+          className="absolute bg-red w-16 h-11 left-1 bottom-0"
           style={{
             clipPath: "polygon(0 0, 100% 0, 65% 100%, 0% 100%)",
             background: "#1C252D",
@@ -59,7 +61,7 @@ const GroupButton: React.FC = () => {
             background: "#fff",
             boxShadow: "0 0 0 5px #1C252D",
           }}>
-          <Image src={adc} alt="Adc" className="w-6 h-6" />
+          <Image src={adc} alt="Adc" className="w-6 h-6 mr-2" />
         </button>{" "}
       </div>
     </div>
