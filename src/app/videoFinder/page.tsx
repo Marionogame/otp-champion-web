@@ -1,69 +1,78 @@
 import GroupButton from "@components/GroupButton";
 import CardVideoList from "@components/CardVideoList";
+import InputOtp from "@components/InputOtp";
+import Image from "next/image";
+import yorick from "@assets/yorick.jpg";
+
 const VideoFinder = () => {
   return (
-    <div>
-      <div className="flex justify-between">
+    <div className="h-[calc(100vh-50px)] bg-[#050010] bg-[url('@assets/fondo.jpg')] bg-cover bg-center bg-fixed z-[1] flex flex-col">
+      <div className="w-[90%] h-full flex justify-center m-auto">
         <div>
-          Champions
-          <span>
-            <svg
-              className="w-6 h-6 text-gray-800 dark:text-white"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="currentColor"
-              viewBox="0 0 24 24">
-              <path d="M5.05 3C3.291 3 2.352 5.024 3.51 6.317l5.422 6.059v4.874c0 .472.227.917.613 1.2l3.069 2.25c1.01.742 2.454.036 2.454-1.2v-7.124l5.422-6.059C21.647 5.024 20.708 3 18.95 3H5.05Z" />
-            </svg>
-          </span>
-        </div>{" "}
-        <GroupButton />{" "}
+          <div className="h-[100px] ">
+            <div className="lg:flex lg:justify-between w-full md:flex md:items-center mt-8">
+              <div className="flex items-end">
+                <Image src={yorick} alt="logo" className="rounded-full shadow-md w-22 h-22 object-cover border-2 border-yellow-200" />
+
+                <GroupButton />
+              </div>
+              <div className="w-100 flex items-end">
+                <InputOtp big={false} />
+              </div>
+            </div>
+            <div className={"flex justify-center "}>
+              <div className="bg-amber-300 w-full relative z-2 h-0.5 mt-6" />
+            </div>
+          </div>
+          <div className="h-[calc(100vh-262px)] overflow-y-auto">
+            <div className="h-full ">
+              <CardVideoList
+                data={[
+                  {
+                    name: "Ahri",
+                    role: "Mage",
+                    damage: "High",
+                    difficulty: "Medium",
+                  },
+                  {
+                    name: "Garen",
+                    role: "Fighter",
+                    damage: "Medium",
+                    difficulty: "Low",
+                  },
+                  {
+                    name: "Lee Sin",
+                    role: "Assassin",
+                    damage: "High",
+                    difficulty: "High",
+                  },
+                  {
+                    name: "Lux",
+                    role: "Mage",
+                    damage: "High",
+                    difficulty: "Low",
+                  },
+                  {
+                    name: "Yasuo",
+                    role: "Fighter",
+                    damage: "High",
+                    difficulty: "High",
+                  },
+                  {
+                    name: "Jinx",
+                    role: "Marksman",
+                    damage: "High",
+                    difficulty: "Medium",
+                  },
+                ]}
+              />
+            </div>
+          </div>
+          <div className="flex items-center justify-center h-20 ">
+            <div className="bg-[#4d81ac] w-[8.125rem] sm:w-[70%] h-0.5 flex" />
+          </div>
+        </div>
       </div>
-      <div className={"flex justify-center "}>
-        <div className="bg-amber-300 w-[90%] relative z-2 h-0.5 mt-6" />
-      </div>
-      <CardVideoList
-        data={[
-          {
-            name: "Ahri",
-            role: "Mage",
-            damage: "High",
-            difficulty: "Medium",
-          },
-          {
-            name: "Garen",
-            role: "Fighter",
-            damage: "Medium",
-            difficulty: "Low",
-          },
-          {
-            name: "Lee Sin",
-            role: "Assassin",
-            damage: "High",
-            difficulty: "High",
-          },
-          {
-            name: "Lux",
-            role: "Mage",
-            damage: "High",
-            difficulty: "Low",
-          },
-          {
-            name: "Yasuo",
-            role: "Fighter",
-            damage: "High",
-            difficulty: "High",
-          },
-          {
-            name: "Jinx",
-            role: "Marksman",
-            damage: "High",
-            difficulty: "Medium",
-          },
-        ]}
-      />
     </div>
   );
 };

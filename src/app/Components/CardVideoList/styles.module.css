@@ -16,10 +16,10 @@
   margin-bottom: 2rem;
   position: relative;
   margin-top: 2rem;
-  height: 15rem;
+  height: 9.7rem;
   overflow: hidden;
   transition: all 0.5s;
-  width: 35rem;
+  width: 22rem;
   cursor: pointer;
   clip-path: polygon(80% 0, 100% 15%, 100% 100%, 0 100%, 0 0);
 }
@@ -30,6 +30,8 @@
   }
 }
 .card:hover {
+  margin-top: 2.5rem;
+
   /* padding-top: 0.1rem; */
   clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 0);
 }
