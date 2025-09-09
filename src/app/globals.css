@@ -30,6 +30,31 @@
       rgba(255, 252, 189, 1) 0%
     );
   }
+  .custom-scrollbar {
+    @apply overflow-y-auto;
+
+    &::-webkit-scrollbar {
+      width: 0.5rem; /* w-2 */
+    }
+
+    &::-webkit-scrollbar-track {
+      @apply bg-gray-100;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      @apply bg-gray-300;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      &::-webkit-scrollbar-track {
+        @apply bg-[#1E2939];
+      }
+
+      &::-webkit-scrollbar-thumb {
+        @apply bg-[#335180];
+      }
+    }
+  }
 }
 
 @theme inline {

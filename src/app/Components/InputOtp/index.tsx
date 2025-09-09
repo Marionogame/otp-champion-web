@@ -34,7 +34,7 @@ const data = [
 ];
 
 const InputOtp: React.FC<InputProps> = ({ big }) => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState(staticData[0]);
   const optionRegionRender = () => {
     const optionSearch = map(staticData, (item) => {
@@ -157,12 +157,9 @@ const InputOtp: React.FC<InputProps> = ({ big }) => {
       {open && (
         <div className="relative mt-1 w-full bg-gold-gradient" style={{ height: "24rem" }}>
           <ul
-            className={`flex flex-wrap overflow-y-auto justify-around z-10 h-112  mb-1 mr-1 ml-1 bt-1  border-t-4 border-t-amber-50 shadow-lg
-  [&::-webkit-scrollbar]:w-2
-  [&::-webkit-scrollbar-track]:bg-gray-100
-  [&::-webkit-scrollbar-thumb]:bg-gray-300
-  dark:[&::-webkit-scrollbar-track]:bg-neutral-700
-  dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500"`}
+            className={`flex flex-wrap custom-scrollbar justify-around z-10 h-112  mb-1 mr-1 ml-1 bt-1  border-t-4 border-t-amber-50 
+              shadow-lg
+  `}
             style={{
               backgroundImage: `url(${fondoColina.src})`,
               backgroundSize: "cover",
