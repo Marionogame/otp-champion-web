@@ -1,5 +1,5 @@
 import GroupButton from "@components/GroupButton";
-import CardVideoList from "./components/CardVideoList";
+import CardVideoList from "../Components/CardVideoList";
 import InputOtp from "@components/InputOtp";
 import Image from "next/image";
 import yorick from "@assets/yorick.jpg";
@@ -10,8 +10,10 @@ const VideoFinder = () => {
       <div className="w-[90%] h-full flex justify-center m-auto">
         <div>
           <div className="lg:flex h-[100px] lg:justify-between w-full md:flex md:items-center mt-8">
-            <div className="flex h-full items-end">
-              <Image src={yorick} alt="logo" className="rounded-full shadow-md w-22 h-22 object-cover border-2 border-yellow-200" />
+            <div className="md:flex h-full items-end">
+              <div className="md:flex md:justify-center md:items-center md:mb-2">
+                <Image src={yorick} alt="logo" className="rounded-full shadow-md w-22 h-22 object-cover border-2 border-yellow-200" />
+              </div>
 
               <GroupButton />
             </div>

@@ -32,7 +32,7 @@ export default function RootLayout({
         <script src="https://cdn.jsdelivr.net/npm/semantic-ui-react/dist/umd/semantic-ui-react.min.js"></script>
         {children}
       </body>
-      <Footer />
+      {/* <Footer /> */}
     </html>
   );
 }
